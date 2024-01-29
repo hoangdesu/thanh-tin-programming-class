@@ -64,7 +64,7 @@ public class Jan26_Calculator {
             result = a + b;
         } else if (operator == '-') {
             result = a - b;
-        } else if (operator == '*') {
+        } else if (operator == '*' || operator == 'x') {
             result = a * b;
         } else {
             result = a / b;
