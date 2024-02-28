@@ -14,22 +14,50 @@ public class Jan29_Methods_SwitchCase {
         System.out.print("Enter a country: ");
         String country = sc.nextLine();
 
+        String capital = getCapitalOfCountry(country);
+
+        System.out.println("Capital of " + country + " is " + capital);
+
         // if (country.equals("vietnam")) {...}
+//        switch (country) {
+//            case "vietnam":
+//                System.out.println("Xin chao");
+//                break;
+//            case "japan":
+//                System.out.println("Konnichiwa");
+//                break;
+//            case "korea":
+//                System.out.println("Annyeong");
+//                break;
+//            default:
+//                System.out.println("Hello");
+//                break;
+//        }
+    }
+
+    public static String getCapitalOfCountry(String country) {
+        String capital;
+
+//        value mapping: connect các giá trị tương đương
+
         switch (country) {
             case "vietnam":
-                System.out.println("Xin chao");
+                capital = "Ha Noi";
                 break;
             case "japan":
-                System.out.println("Konnichiwa");
+                capital = "Tokyo";
                 break;
             case "korea":
-                System.out.println("Annyeong");
+                capital = "Seoul";
                 break;
             default:
-                System.out.println("Hello");
+                capital = "Unknown";
                 break;
         }
+
+        return capital;
     }
+
 
 //    if country.equals("vietnam || Vietnam || viet nam || Viet Nam || Việt Nam")
 //
