@@ -13,25 +13,25 @@ public class Feb29_RockPaperScissors {
 //        muon computer co 1 trong 3 random values: rock / paper / scissors
 //          => mapping: connect one data source to another
 
-        String[] moves = { "rock", "paper", "scissors" };
-
-        // ---> random INTEGER number tu 0 -> 2
-
-        int randomIndex = (int) (Math.random() * moves.length); // type casting
-        System.out.println("random index: " + randomIndex);
-        System.out.println("Computer's move: " + moves[randomIndex]);
-
-        Enter your move: rock
-        Computer's move: rock
-        > Draw!
-
-        Enter your move: rock
-        Computer's move: paper
-        > Computer wins!
-
-        Enter your move: scissors
-        Computer's move: paper
-        > You win!
+//        String[] moves = { "rock", "paper", "scissors" };
+//
+//        // ---> random INTEGER number tu 0 -> 2
+//
+//        int randomIndex = (int) (Math.random() * moves.length); // type casting
+//        System.out.println("random index: " + randomIndex);
+//        System.out.println("Computer's move: " + moves[randomIndex]);
+//
+//        Enter your move: rock
+//        Computer's move: rock
+//        > Draw!
+//
+//        Enter your move: rock
+//        Computer's move: paper
+//        > Computer wins!
+//
+//        Enter your move: scissors
+//        Computer's move: paper
+//        > You win!
 
 
     }
