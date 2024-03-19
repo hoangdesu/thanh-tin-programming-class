@@ -33,8 +33,6 @@ public class Mar12_ThanSoHocSolution {
 
         return thanSoHoc;
     }
-
-
 }
 
 //userIsAuthenticated -> boolean
