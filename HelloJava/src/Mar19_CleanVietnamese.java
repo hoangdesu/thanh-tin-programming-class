@@ -22,8 +22,8 @@ public class Mar19_CleanVietnamese {
 //        cleanVietnamese -> "iPhone 15 Pro Max 'hang moi' re hon chinh hang chuc trieu dong";
 
 
-        String[] games = [lien minh, toc chien, pubg, audition];
-        swapElements(games, 0, 2) => [pubg, toc chien, lien minh, audition];
+//        String[] games = [lien minh, toc chien, pubg, audition];
+//        swapElements(games, 0, 2) => [pubg, toc chien, lien minh, audition];
     }
 
     public static void sayHello() {
@@ -32,7 +32,8 @@ public class Mar19_CleanVietnamese {
         System.out.println("Lang in sayHello() method: " + lang);
     }
 
-    swapElements(array[], index 1, index 2) -> array[]
+    // HW: // TODO
+//    swapElements(array[], index 1, index 2) -> array[]
 
 
 //    cleanVietnamese(string) -> string
