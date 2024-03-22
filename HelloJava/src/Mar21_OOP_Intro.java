@@ -32,6 +32,7 @@ public class Mar21_OOP_Intro {
         Scanner sc = new Scanner(System.in);
 
 
+        // create objects from class Car
         Car mercedes = new Car("mercedes", 2000);
         Car audi = new Car("audi", 3000);
 
@@ -53,13 +54,18 @@ public class Mar21_OOP_Intro {
         audi.drive();
         mercedes.drive();
 
+//        2 groups of data types:
+//        - int, float, char, double, boolean -> primitive type
+//        - String, Integer, Float, Double, Car, Boolean, Scanner -> wrapper / reference type
+
+
+
+        String name = "...";
+
+//        built-in type in Java
+
+
 //        String test = "";
 //        test.toUpperCase();
-
-
-
-
-
-
     }
 }
