@@ -5,7 +5,7 @@ public class Champion {
     int health = 100;
     private boolean hasFlash = true;
 
-    public money = $100;
+//    public money = $100;
 
     // mutator method
     public void damage(int value) {
@@ -17,9 +17,9 @@ public class Champion {
         return this.hasFlash;
     }
 
-    xinTienMe() {
-        return $50;
-    }
+//    xinTienMe() {
+//        return $50;
+//    }
 }
 
 //100 - 20 = 80;
