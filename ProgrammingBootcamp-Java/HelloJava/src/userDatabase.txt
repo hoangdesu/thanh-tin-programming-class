@@ -1,0 +1,11 @@
+hoang:khongbiet
+tin:Tindeptrai
+abc:xyz
+doroke:abc
+bgt2k4:123
+brian:nguyen
+haha:hehe
+tin:do
+hoang:nguyen
+faker:fake
+hoho:hehe
