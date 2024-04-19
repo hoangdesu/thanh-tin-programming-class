@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Apr14_ReadWriteFile {
     public static void main(String[] args) throws IOException {
-//        1. read all current users in the database
+//        1. read all current users in the file
         String file = "./src/userDatabase.txt";
 
         FileInputStream fis = new FileInputStream(file);
