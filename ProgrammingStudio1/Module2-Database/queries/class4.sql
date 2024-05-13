@@ -1,0 +1,27 @@
+--Q14: Among the Hitchcock movies, which one received the most academy awards?
+
+SELECT mov.MVTITLE, dir.DIRNAME, mov.AWRD, mov.NOMS, MAX(mov.AWRD)
+FROM MOVIE mov JOIN DIRECTOR dir
+ON mov.DIRNUMB = dir.DIRNUMB
+WHERE dir.DIRNAME LIKE 'Hitchcock%'
+;
+
+SELECT mov.MVTITLE, dir.DIRNAME, mov.AWRD, mov.NOMS
+FROM MOVIE mov JOIN DIRECTOR dir
+ON mov.DIRNUMB = dir.DIRNUMB
+ORDER BY MVTITLE ASC
+;
+
+SELECT * FROM MOVIE
+ORDER BY MVTITLE ASC
+;
+
+SELECT mov.MVTITLE, dir.DIRNAME, mov.AWRD, mov.NOMS
+FROM DIRECTOR dir RIGHT JOIN MOVIE mov 
+ON mov.DIRNUMB = dir.DIRNUMB
+ORDER BY MVTITLE ASC
+;
+
+SELECT mov.MVTITLE, dir.DIRNAME, mov.AWRD, mov.NOMS
+FROM DIRECTOR dir RIGHT JOIN MOVIE mov
+;
