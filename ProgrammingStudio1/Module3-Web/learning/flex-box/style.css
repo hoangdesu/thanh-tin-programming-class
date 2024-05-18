@@ -1,0 +1,29 @@
+/* select all H1 */
+h1 {
+    color: red;
+}
+
+/* select class: .heading1 */
+.heading1 {
+    color: purple;
+}
+
+/* select id: #pink-h1 */
+#pink-h1 {
+    color: pink;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+/* pseudo class */
+#click-me {
+    /* color: rgb | hsl | hex  */
+    color: brown;
+}
+
+#click-me:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

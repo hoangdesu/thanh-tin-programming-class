@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rankings</h1>
+
+    <h3>Select your country:</h3>
+    <select name="" id="">
+        <option value="">Japan</option>
+        <option>Vietnam</option>
+        <option value="">Korea</option>
+    </select>
+
+    <button>Apply</button>
+
+    <table border="1">
+        <!-- inject data from BE to FE using HTML -->
+        <tr>
+            <th>No</th>
+            <th>Country</th>
+        </tr>
+
+        <!-- <tr>
+            <td>1</td>
+            <td>Vietnam</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Japan</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Korea</td>
+        </tr> -->
+
+        20
+        for (int i = 0; i < countries.length(); i++) {
+            sout("
+            <tr>
+                <td>{i + 1}</td>
+                <td>{countries[i]}</td>
+            </tr>
+            ")
+        }
+    </table>
+</body>
+</html>
