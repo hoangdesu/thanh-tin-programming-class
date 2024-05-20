@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LV2 Page</title>
+    <link rel="stylesheet" href="../css/lv2Page.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top_navigation">
+                <a href="#">Home</a>
+                <a href="#">Data</a>
+                <a href="#">About us</a>
+                <a href="#">Contact</a>
+        </div>
+    </header>
+    <div class="wrapper_selection">
+        <div class="wrapper_world">
+            <label for="World">
+                <input type="radio" id="World" class="World" name="check">World
+            </label>
+        </div>
+        <div class="wrapper_country">
+            <label for="Country">
+                <input type="radio" id="Country" class="Country" name="check">Country
+            </label>
+        </div>
+        <div class="wrapper_city">
+            <label for="City">
+                <input type="radio" id="City" class="City" name="check">City
+            </label>
+        </div>
+        <div class="wrapper_state">
+            <label for="State">
+                <input type="radio" id="State" class="State" name="check">State
+            </label>
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrapper_year">
+            <label for="start_years">Start years:</label>
+            <select name="start_years" id="start_years">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+            </select>
+            </datalist>
+            <label for="end_years"> End years:</label>
+            <select name="end_years" id="end_years" class="end_years">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+            </select>
+        </div>
+        <div class="wrapper_changein">
+            <label for="change_in">Change in:</label>
+            <select name="change_in" id="change_in">
+                <option value="Population">Population</option>
+                <option value="GDP">GDP</option>
+                <option value="Area">Area</option>
+            </select>
+        </div>
+        <div class="wrapper_orderby">
+            <label for="order_by">Order By:</label>
+            <select name="order_by" id="order_by">
+                <option value="Ascending">Ascending</option>
+                <option value="Descending">Descending</option>
+            </select>
+        </div>
+    <button>
+        <div class="wrapper_view">
+            <p>View</p>
+        </div>
+    </button>
+    <div class="container_view">    
+        <p class="choice">World</p>
+        <h1 class="title">Average Land and Ocean Temperature Changes</h1>
+        <div class="aside">
+            <p class="text">In__years, the temperature increases</p>
+            <p class="celsius">0,00℃</p>
+        </div>
+       
+
+    </div>
+
+
+</body>
+    </html>
