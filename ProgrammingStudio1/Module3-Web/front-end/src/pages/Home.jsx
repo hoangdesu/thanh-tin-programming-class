@@ -59,7 +59,7 @@ const Wrapper = styled.div`
   }
   .top_navigation a:hover {
     color: #fffef4;
-    background-color: #ff6500;
+    /* background-color: #ff6500; */
     border-radius: 8px;
     padding: 5px;
   }
@@ -335,15 +335,15 @@ const Home = () => {
   return (
     <>
       <Wrapper>
-        <div class="header_title">
-          <img class="logo" src={GlobalLogo} alt="Global logo" />
+        <div className="header_title">
+          <img className="logo" src={GlobalLogo} alt="Global logo" />
           <h1 className="font-bold text-xl">CHRONIC TEMPERATURE MACHINE</h1>
         </div>
         <Navbar />
-        <div class="wrapper_title">
-          <p class="title">CLIMATE CHANGE</p>
-          <p class="subtitle">"Explore the Data, Empower Change."</p>
-          <p class="subtitle2">Explore More</p>
+        <div className="wrapper_title">
+          <p className="title">CLIMATE CHANGE</p>
+          <p className="subtitle">"Explore the Data, Empower Change."</p>
+          <p className="subtitle2">Explore More</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="64"
@@ -363,13 +363,13 @@ const Home = () => {
           </svg>
         </div>
 
-        <div class="overlap-1">
-          <img class="Earth" src={Earth1} alt="" />
+        <div className="overlap-1">
+          <img className="Earth" src={Earth1} alt="" />
         </div>
 
-        <div class="wrapper_temp">
-          <p class="title_temp">GLOBAL TEMPERATURE</p>
-          <div class="context_temp">
+        <div className="wrapper_temp">
+          <p className="title_temp">GLOBAL TEMPERATURE</p>
+          <div className="context_temp">
             <ion-icon name="thermometer-outline"></ion-icon>
             <p>
               In 1750, the global average temperature was 8.719 °C
@@ -383,9 +383,9 @@ const Home = () => {
           </div>
         </div>
 
-        <div class="wrapper_population">
-          <p class="title_pop">POPULATION</p>
-          <div class="context_pop">
+        <div className="wrapper_population">
+          <p className="title_pop">POPULATION</p>
+          <div className="context_pop">
             <ion-icon name="people-outline"></ion-icon>
             <p>
               In 1960, there was around 3 billion people on the Earth
@@ -400,9 +400,9 @@ const Home = () => {
           </div>
         </div>
 
-        <div class="wrapper_question">
-          <p class="title_question">HOW DID THE CHANGES TAKE PLACE ❓</p>
-          <div class="context_question">
+        <div className="wrapper_question">
+          <p className="title_question">HOW DID THE CHANGES TAKE PLACE ❓</p>
+          <div className="context_question">
             <p>
               Are you surprised by the numbers presented above ?<br />
               Are you curious what happened during those period ?<br />
@@ -411,13 +411,13 @@ const Home = () => {
           </div>
         </div>
 
-        <div class="overlap-2">
-          <img class="temppop" src={Temp1} alt="a" />
+        <div className="overlap-2">
+          <img className="temppop" src={Temp1} alt="a" />
         </div>
 
-        <p class="bottom_text">👇🏻 We have everything you need 👇🏻</p>
-        <button class="data">
-          <a href="selectionPage.html"> Right Here</a>
+        <p className="bottom_text mt-20">👇🏻 We have everything you need 👇🏻</p>
+        <button className="data">
+          <a href="/data">Right Here</a>
         </button>
         <Footer />
       </Wrapper>

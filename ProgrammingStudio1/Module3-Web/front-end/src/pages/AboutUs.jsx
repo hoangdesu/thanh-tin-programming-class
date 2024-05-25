@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
+import Peter from "../img/Peter.png";
+import RMITLogo from "../img/RMIT logo.png";
+import Male from "../img/Male.png";
+import Female from "../img/Female.png";
+import Olivia from "../img/Olivia.png";
+import Elise from "../img/Elise.png";
+import Aiden from "../img/Aiden.png";
+
 const Wrapper = styled.div`
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-  @import url("https://fonts.googleapis.com/css?family=Martel:700|Mate:400|Merriweather:400,700|Anonymous+Pro:400");
-  * {
+  & {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
+    font-family: "Mate", Helvetica;
   }
   html,
   body {
@@ -674,28 +681,28 @@ const Wrapper = styled.div`
 const AboutUs = () => {
   return (
     <Wrapper>
-      <div class="about-us">
-        <div class="div">
-          <div class="text-wrapper">About us</div>
-          <img class="rectangle" src="rectangle-2.png" />
-          <div class="text-wrapper-2">Our Perspective</div>
-          <div class="text-wrapper-3">Our Teams</div>
-          <p class="p">
+      <div className="about-us">
+        <div className="div">
+          <div className="text-wrapper">About us</div>
+          <img className="rectangle" src="rectangle-2.png" />
+          <div className="text-wrapper-2">Our Perspective</div>
+          <div className="text-wrapper-3">Our Teams</div>
+          <p className="p">
             In the face of climate change, understanding and analyzing
             temperature patterns across both land and oceanic regions is
             paramount. Therefore, we gathered information about temperature and
             population in many various countries then made this website for
             everyone can have an accessible website.
           </p>
-          <div class="text-wrapper-4">Our Mission</div>
-          <p class="text-wrapper-5">
+          <div className="text-wrapper-4">Our Mission</div>
+          <p className="text-wrapper-5">
             Our goal of this website not only help governments, scientists and
             the public analyze patterns of change in ocean and land temperatures
             over two and a half centuries but also for the public to become
             active participants in the fight against climate change.
           </p>
-          <p class="source-kaggle-https">
-            <span class="span">
+          <p className="source-kaggle-https">
+            <span className="span">
               Source: Kaggle
               <br />
             </span>
@@ -704,12 +711,12 @@ const AboutUs = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="text-wrapper-6">
+              <span className="text-wrapper-6">
                 https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data
                 <br />
               </span>
             </a>
-            <span class="span">
+            <span className="span">
               <br />
               Source: Raw data: Berkeley Earth data page <br />
             </span>
@@ -718,12 +725,12 @@ const AboutUs = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="text-wrapper-6">
+              <span className="text-wrapper-6">
                 http://berkeleyearth.org/data/
                 <br />
               </span>
             </a>
-            <span class="span">
+            <span className="span">
               <br />
               Source: World Development Indicators&nbsp;&nbsp;
               <br />
@@ -733,33 +740,33 @@ const AboutUs = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="text-wrapper-6">
+              <span className="text-wrapper-6">
                 https://data.worldbank.org/indicator/SP.POP.TOTL{" "}
               </span>
             </a>
           </p>
-          <div class="text-wrapper-7">Support Sources</div>
-          <div class="group">
-            <div class="overlap-group">
-              <div class="rectangle-2"></div>
-              <p class="div-2">
-                <span class="text-wrapper-8">
+          <div className="text-wrapper-7">Support Sources</div>
+          <div className="group">
+            <div className="overlap-group">
+              <div className="rectangle-2"></div>
+              <p className="div-2">
+                <span className="text-wrapper-8">
                   Quotes:
                   <br />
                 </span>
-                <span class="text-wrapper-9">
+                <span className="text-wrapper-9">
                   &#34;Contributing to reducing the climate change in the world
                   is my work&#34;
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Background:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   A scientist works for a company in climate field.
                   <br />
                   Passionate about the natural phenomenon and nature and science
@@ -767,22 +774,22 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Needs:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   A&nbsp;&nbsp;tool or website that help him figure out reliable
                   numerical and statistical information about the changing
                   climate and as well as the population in the world.
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Goals:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Accessing and gathering information about temperature and
                   population information of various countries.
                   <br />
@@ -791,11 +798,11 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Experience skills:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   In-dept knowledge of climate change.
                   <br />
                   Working with computer and numerical documents everyday.
@@ -803,8 +810,8 @@ const AboutUs = () => {
                 </span>
               </p>
             </div>
-            <img class="image" src="img/Peter.png" />
-            <p class="text-wrapper-11">
+            <img className="image" src={Peter} />
+            <p className="text-wrapper-11">
               Name: Peter
               <br />
               Age: 45
@@ -812,26 +819,26 @@ const AboutUs = () => {
               Location: Australia, Melbourne
             </p>
           </div>
-          <div class="group-2">
-            <div class="overlap-group">
-              <div class="rectangle-2"></div>
-              <p class="quotes-everything">
-                <span class="text-wrapper-8">
+          <div className="group-2">
+            <div className="overlap-group">
+              <div className="rectangle-2"></div>
+              <p className="quotes-everything">
+                <span className="text-wrapper-8">
                   Quotes:
                   <br />
                 </span>
-                <span class="text-wrapper-9">
+                <span className="text-wrapper-9">
                   &#34;Everything lives matter&#34;
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Background:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   A high school student.
                   <br />
                   Has participated in protecting environment activities for the
@@ -839,11 +846,11 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Needs:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   A web application that allows her to analyze patterns of
                   change in temperatures and population statistics.
                   <br />A platform that can provide all necessary information
@@ -851,11 +858,11 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Goals:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Deepen understanding and spur action on climate change.
                   <br />
                   Seeking for opportunities to join with organizations or
@@ -864,11 +871,11 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Experience skills:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Effective communication through different ways of expression.
                   <br />
                   Works well in teams and demonstrates leadership potential
@@ -876,8 +883,8 @@ const AboutUs = () => {
                 </span>
               </p>
             </div>
-            <img class="image" src="img/Elise.png" />
-            <p class="text-wrapper-11">
+            <img className="image" src={Elise} alt="img/Elise.png" />
+            <p className="text-wrapper-11">
               Name: Elise
               <br />
               Age: 17
@@ -885,26 +892,26 @@ const AboutUs = () => {
               Location: London, United Kingdom
             </p>
           </div>
-          <div class="group-3">
-            <div class="overlap">
-              <div class="rectangle-3"></div>
-              <p class="div-2">
-                <span class="text-wrapper-8">
+          <div className="group-3">
+            <div className="overlap">
+              <div className="rectangle-3"></div>
+              <p className="div-2">
+                <span className="text-wrapper-8">
                   Quotes:
                   <br />
                 </span>
-                <span class="text-wrapper-9">
+                <span className="text-wrapper-9">
                   &#34;The Earth is our second home&#34;
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Background:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Studied Environmental Science at Columbia University
                   <br />
                   Has a strong passion for learning about the relationship
@@ -912,22 +919,22 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Needs:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Seeks a reliable source of information and a supportive
                   community of like-minded individuals who share his passion for
                   environmental stewardship
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Goals:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Staying informed about the latest developments in
                   environmental research, policy, and activism
                   <br />
@@ -936,11 +943,11 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Experience skills:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Strong communication skills and a knack for persuasive
                   argumentation
                   <br />
@@ -950,8 +957,8 @@ const AboutUs = () => {
                 </span>
               </p>
             </div>
-            <img class="image" src="img/Aiden.png" />
-            <p class="text-wrapper-11">
+            <img className="image" src={Aiden} alt="Aiden" />
+            <p className="text-wrapper-11">
               Name: Aiden
               <br />
               Age: 39
@@ -959,27 +966,27 @@ const AboutUs = () => {
               Location: New York, United States
             </p>
           </div>
-          <div class="group-4">
-            <div class="overlap">
-              <div class="rectangle-3"></div>
-              <p class="div-2">
-                <span class="text-wrapper-8">
+          <div className="group-4">
+            <div className="overlap">
+              <div className="rectangle-3"></div>
+              <p className="div-2">
+                <span className="text-wrapper-8">
                   Quotes:
                   <br />
                 </span>
-                <span class="text-wrapper-9">
+                <span className="text-wrapper-9">
                   &#34;I&#39;m looking for a tool that can help me explore
                   climate change data in a simple and understandable way.&#34;
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Background:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   High school geography teacher.
                   <br />
                   She has a bachelor&#39;s degree in Geography and Education.
@@ -988,22 +995,22 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Needs:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   The ability to choose a statistic based on maximum, minimum
                   and average information and view the change in temperature
                   between the compared years for all cities or states.
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Goals:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Understand the patterns of change in ocean and land
                   temperatures over a hundred years.
                   <br />
@@ -1012,11 +1019,11 @@ const AboutUs = () => {
                   <br />
                   <br />
                 </span>
-                <span class="text-wrapper-8">
+                <span className="text-wrapper-8">
                   Experience skills:
                   <br />
                 </span>
-                <span class="text-wrapper-10">
+                <span className="text-wrapper-10">
                   Comfortable using technology and often uses various software
                   and web applications for her work.
                   <br />
@@ -1025,8 +1032,8 @@ const AboutUs = () => {
                 </span>
               </p>
             </div>
-            <img class="image" src="img/Olivia.png" />
-            <div class="text-wrapper-11">
+            <img className="image" src={Olivia} alt="img/Olivia.png" />
+            <div className="text-wrapper-11">
               Name: Olivia
               <br />
               Age: 28
@@ -1034,99 +1041,99 @@ const AboutUs = () => {
               Location: France
             </div>
           </div>
-          <img class="line" src="img/Line.png" />
-          <div class="overlap-wrapper">
-            <div class="overlap-2">
-              <div class="group-wrapper">
-                <div class="overlap-group-wrapper">
-                  <div class="overlap-group-2">
-                    <div class="text-wrapper-12">
+          <img className="line" src="img/Line.png" />
+          <div className="overlap-wrapper">
+            <div className="overlap-2">
+              <div className="group-wrapper">
+                <div className="overlap-group-wrapper">
+                  <div className="overlap-group-2">
+                    <div className="text-wrapper-12">
                       Nguyen Tan Thang
                       <br />
                       S3986344
                     </div>
-                    <div class="rectangle-4"></div>
-                    <div class="rectangle-4"></div>
+                    <div className="rectangle-4"></div>
+                    <div className="rectangle-4"></div>
                   </div>
                 </div>
               </div>
-              <img class="img" src="img/Male.png" />
+              <img className="img" src={Male} alt="img/Male.png" />
             </div>
           </div>
-          <div class="div-wrapper">
-            <div class="overlap-2">
-              <img class="image-2" src="img/Female.png" />
-              <div class="group-wrapper">
-                <div class="group-5">
-                  <div class="overlap-group-wrapper">
-                    <div class="overlap-group-2">
-                      <div class="text-wrapper-12">
+          <div className="div-wrapper">
+            <div className="overlap-2">
+              <img className="img" src={Female} alt="img/Female.png" />
+              <div className="group-wrapper">
+                <div className="group-5">
+                  <div className="overlap-group-wrapper">
+                    <div className="overlap-group-2">
+                      <div className="text-wrapper-12">
                         Nguyen Ky Anh
                         <br />
                         S4103353
                       </div>
-                      <div class="rectangle-4"></div>
-                      <div class="rectangle-4"></div>
+                      <div className="rectangle-4"></div>
+                      <div className="rectangle-4"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="group-6">
-            <div class="group-5">
-              <div class="overlap-3">
-                <div class="group-wrapper">
-                  <div class="overlap-group-wrapper">
-                    <div class="overlap-group-2">
-                      <div class="text-wrapper-12">
+          <div className="group-6">
+            <div className="group-5">
+              <div className="overlap-3">
+                <div className="group-wrapper">
+                  <div className="overlap-group-wrapper">
+                    <div className="overlap-group-2">
+                      <div className="text-wrapper-12">
                         Do Thanh Tin
                         <br />
                         S3970879
                       </div>
-                      <div class="rectangle-4"></div>
+                      <div className="rectangle-4"></div>
                     </div>
                   </div>
                 </div>
-                <img class="img" src="img/Male.png" />
+                <img className="img" src={Male} alt="img/Male.png" />
               </div>
             </div>
           </div>
-          <div class="group-7">
-            <div class="overlap-4">
-              <div class="group-wrapper">
-                <div class="overlap-group-wrapper">
-                  <div class="overlap-group-2">
-                    <div class="text-wrapper-12">
+          <div className="group-7">
+            <div className="overlap-4">
+              <div className="group-wrapper">
+                <div className="overlap-group-wrapper">
+                  <div className="overlap-group-2">
+                    <div className="text-wrapper-12">
                       Nguyen Thanh Nhan
                       <br />
                       S4073629
                     </div>
-                    <div class="rectangle-4"></div>
+                    <div className="rectangle-4"></div>
                   </div>
                 </div>
               </div>
-              <img class="image-3" src="img/Male.png" />
+              <img className="img" src={Male} alt="img/Male.png" />
             </div>
           </div>
-          <div class="group-8">
-            <div class="overlap-2">
-              <div class="group-wrapper">
-                <div class="overlap-group-wrapper">
-                  <div class="overlap-group-2">
-                    <div class="text-wrapper-12">
+          <div className="group-8">
+            <div className="overlap-2">
+              <div className="group-wrapper">
+                <div className="overlap-group-wrapper">
+                  <div className="overlap-group-2">
+                    <div className="text-wrapper-12">
                       Bui Viet Anh
                       <br />
                       S3988393
                     </div>
-                    <div class="rectangle-4"></div>
+                    <div className="rectangle-4"></div>
                   </div>
                 </div>
               </div>
-              <img class="img" src="img/Male.png" />
+              <img className="img" src={Male} alt="img/Male.png" />
             </div>
           </div>
-          <img class="pngwing" src="img/RMIT logo.png" />
+          <img className="pngwing" src={RMITLogo} alt="RMITLogo" />
         </div>
       </div>
     </Wrapper>

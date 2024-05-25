@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css?family=Martel:700|Mate:400|Merriweather:400,700|Anonymous+Pro:400"); */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Martel:700|Mate:400|Merriweather:400,700|Anonymous+Pro:400");
 
 body {
   margin: 0;

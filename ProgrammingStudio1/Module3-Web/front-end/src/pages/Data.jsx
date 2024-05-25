@@ -1,6 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import axios from "../config/axios";
+
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -88,34 +87,12 @@ const Wrapper = styled.div`
 `;
 
 const Data = () => {
-  //   const { isLoading, error, data, refetch } = useQuery({
-  //     queryKey: ["a"],
-  //     queryFn: () => axios.get(`/countries`).then((res) => res.data),
-  //     // onSuccess: campgrounds => {
-  //     //     setSortedCampgrounds(campgrounds);
-  //     // },
-  //   });
-
-  //   console.log(data);
-
-  //   if (isLoading) return "Loading...";
-
-  //   if (data)
-  //     return (
-  //       <div>
-  //         {/* <h1>Data from server</h1> */}
-  //         {/* <p>{data}</p> */}
-  //         {/* {data.map(d => <li>{d.name}</li>)} */}
-
-  //       </div>
-  //     );
-
   return (
     <Wrapper>
       <div className="header_content text-center m-8 mt-16">
         <h1 className="">Select Your Options</h1>
       </div>
-      <div class="wrapper mt-16">
+      <div className="wrapper mt-16">
         <button className="button_BASIC border-black bg-slate-200 border-2">
           <a href="/app/data/level2">BASIC</a>
         </button>

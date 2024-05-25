@@ -35,8 +35,8 @@ const Wrapper = styled.div`
 const Navbar = () => {
   return (
     <Wrapper>
-      <header class="header">
-        <div class="top_navigation">
+      <header className="header">
+        <div className="top_navigation">
           <a href="/app">Home</a>
           <a href="/app/data">Data</a>
           <a href="/app/about-us">About us</a>
