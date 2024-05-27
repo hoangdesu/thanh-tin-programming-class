@@ -36,8 +36,8 @@ const World = () => {
     queryFn: () => axios.get(`/level2/world/years`).then((res) => res.data),
   });
 
-  const [startYear, setStartYear] = useState(2000);
-  const [endYear, setEndYear] = useState(2015);
+  const [startYear, setStartYear] = useState(1750);
+  const [endYear, setEndYear] = useState(1751);
 
   const [data, setData] = useState(null);
 
@@ -139,14 +139,18 @@ const World = () => {
               <Carousel.Item>
                 <div className="p-10 flex flex-col items-center">
                   <h3 className="text-center">Average Population change</h3>
-                  {data.yearsPopulation?.startYear != null ? (
+                  {data.yearsPopulation?.[startYear] != null ? (
                     <>
                       <p className="text-center">
                         In {endYear - startYear} years
                       </p>
                       <div className="flex flex-row items-center justify-center gap-5 mt-8">
                         <div>
-                          <h1>{data.populationDifference.toLocaleString()}</h1>
+                          <h1>
+                            {Math.abs(
+                              data.populationDifference
+                            ).toLocaleString()}
+                          </h1>
                           <span>people</span>
                         </div>
                         <p className="text-8xl">
@@ -174,7 +178,9 @@ const World = () => {
                     </>
                   ) : (
                     <>
-                      <p className="mt-20">No data for population prior to 1960.</p>
+                      <p className="mt-20">
+                        No data for population prior to 1960.
+                      </p>
                     </>
                   )}
                 </div>

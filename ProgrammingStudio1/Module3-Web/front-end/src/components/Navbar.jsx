@@ -40,7 +40,7 @@ const Navbar = () => {
           <a href="/app">Home</a>
           <a href="/app/data">Data</a>
           <a href="/app/about-us">About us</a>
-          <a href="/app/contact">Contact</a>
+          {/* <a href="/app/contact">Contact</a> */}
         </div>
       </header>
     </Wrapper>

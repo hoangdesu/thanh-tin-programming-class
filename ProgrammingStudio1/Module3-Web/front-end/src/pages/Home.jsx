@@ -417,7 +417,7 @@ const Home = () => {
 
         <p className="bottom_text mt-20">👇🏻 We have everything you need 👇🏻</p>
         <button className="data">
-          <a href="/data">Right Here</a>
+          <a href="/app/data">Right Here</a>
         </button>
         <Footer />
       </Wrapper>

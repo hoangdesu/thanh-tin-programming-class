@@ -9,3 +9,16 @@ const Level3 = () => {
 }
 
 export default Level3
+
+// countries = [
+//   {
+//     name: 'Vietnam',
+//     cities: ['...'],
+//     statees: ['...']
+//   },
+//   {
+//     name: 'Japan',
+//     cities: ['...'],
+//     statees: ['...']
+//   },
+// ]
