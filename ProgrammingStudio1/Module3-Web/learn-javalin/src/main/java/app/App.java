@@ -46,7 +46,14 @@ public class App {
 
         app.get("/tin.do", new TinDoPage());
 
-        // Dynamic routes: học sau
+        app.get("/about", new AboutPage());
+
+        app.get("/cars", new Cars());
+
+        app.get("/dating-apps", new DatingAppsPage());
+
+        // Dynamic routes
+        app.get("/hello/:name", new HelloName());
     }
 
 }

@@ -16,8 +16,8 @@ public class Mar21_OOP_Intro {
         // constructor: hàm giúp xây dựng các object với các fields khác nhau
 //        constructor là hàm có chung tên với class
         public Car(String brand, float retailPrice) {
-            this.price = retailPrice;
             this.brand = brand;
+            this.price = retailPrice;
         }
 
         // class methods

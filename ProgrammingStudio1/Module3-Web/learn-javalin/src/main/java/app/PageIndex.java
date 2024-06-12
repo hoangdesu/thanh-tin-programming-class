@@ -49,6 +49,8 @@ public class PageIndex implements Handler {
                 <a href='/'>Homepage</a>
                 <a href='/tin.do'>Tin Do</a>
                 <a href='/hoangdesu'>Hoangdesu</a>
+                <a href='/about'>About</a>
+                <a href='/cars'>Cars</a>
             </div>
         """;
 
