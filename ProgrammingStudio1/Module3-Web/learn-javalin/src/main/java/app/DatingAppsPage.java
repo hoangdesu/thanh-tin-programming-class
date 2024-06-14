@@ -10,14 +10,6 @@ import java.util.ArrayList;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
-// public class DatingAppsPage implements Handler {
-//     @Override
-//     public void handle(Context ctx) throws Exception {
-        
-//     }
-    
-// }
-
 public class DatingAppsPage implements Handler {
     public static String DRIVER = "jdbc:sqlite";
     public static String DATABASE_FOLDER = "database";
@@ -47,7 +39,7 @@ public class DatingAppsPage implements Handler {
             ResultSet results = statement.executeQuery(query);
 
             // while scanner.hasNext() {
-            //     scan next line from the file into the app
+            // scan next line from the file into the app
             // }
 
             while (results.next()) {
@@ -72,6 +64,19 @@ public class DatingAppsPage implements Handler {
         }
 
         System.out.println("All the dating apps: " + datingApps);
-        ctx.result(datingApps.toString());
+        // ctx.result(datingApps.toString());
+
+        String htmlTemplate = "<html><h1>Top dating apps:</h1>";
+
+        htmlTemplate += "<ol>";
+
+        // <li>Tinder</li>
+        for (String app : datingApps) {
+            htmlTemplate += "<li>" + app + "</li>";
+        }
+
+        htmlTemplate += "</ol></html>";
+
+        ctx.html(htmlTemplate);
     }
 }
