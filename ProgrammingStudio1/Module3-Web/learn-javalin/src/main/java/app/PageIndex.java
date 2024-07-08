@@ -51,6 +51,7 @@ public class PageIndex implements Handler {
                 <a href='/hoangdesu'>Hoangdesu</a>
                 <a href='/about'>About</a>
                 <a href='/cars'>Cars</a>
+                <a href='/anime'>Anime</a>>
             </div>
         """;
 

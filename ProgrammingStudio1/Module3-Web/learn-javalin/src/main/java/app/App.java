@@ -48,9 +48,11 @@ public class App {
 
         app.get("/about", new AboutPage());
 
-        app.get("/cars", new Cars());
+        app.get("/cars", new Carapp());
 
         app.get("/dating-apps", new DatingAppsPage());
+      
+        app.get("/anime", new Animeapp());
 
         // Dynamic routes
         app.get("/hello/:name", new HelloName());

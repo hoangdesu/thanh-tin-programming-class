@@ -3,7 +3,7 @@ package app;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
-public class Cars implements Handler {
+public class Carapp implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
         String[] cars = { "Mercedes", "McLaren", "BMW", "Lexus", "Audi" };
