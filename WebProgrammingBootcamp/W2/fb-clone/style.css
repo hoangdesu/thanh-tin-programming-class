@@ -1,0 +1,39 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    /* background-color: pink; */
+}
+
+nav #left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#left input {
+    background-color: gray;
+    border: 0;
+    color: white;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+#middle {
+    display: flex;
+    gap: 8px;
+}
+
+#middle p:hover {
+    background: red;
+    border-bottom: 3px solid blue;
+}
+
+#right {
+    display: flex;
+    gap: 8px;
+}
+
+#right img {
+    border-radius: 50%;
+}

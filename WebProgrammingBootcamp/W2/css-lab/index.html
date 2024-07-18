@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li::before {
+            content: '🇻🇳 '
+        }
+
+        li::after {
+            content: ' 🍙'
+        }
+
+        #big::first-letter {
+            font-size: 50px;
+            color: green;
+        }
+
+        #big::first-line {
+            background-color: aqua;
+        }
+
+        #big::selection {
+            background-color: red;
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <p>wassup</p>
+
+    <ul>
+        <li>bun dau mam tom</li>
+        <li>com tam</li>
+        <li>pho</li>
+    </ul>
+
+    <p id="big">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, aliquam quos nisi sed adipisci dolorum? Velit, autem consequuntur cumque consectetur nulla similique quis dicta perspiciatis porro dolore? Earum odit laudantium iste architecto a quos. Dolor necessitatibus reiciendis accusamus corrupti, culpa velit. Alias explicabo ullam fugiat natus voluptate quos vel quibusdam!</p>
+
+</body>
+</html>
