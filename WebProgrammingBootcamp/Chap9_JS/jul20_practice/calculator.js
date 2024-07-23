@@ -15,13 +15,18 @@ const minutes = floatTimeTaken * 60;
 
 // console.log(intTimeTaken, floatTimeTaken);
 console.log(timeTaken);
+
 // console.log(minutes);
 
+let unit = 'hour';
+if (hours > 1) {
+    unit = 'hours'
+}
 
 if (minutes === 0) {
-    alert('Time taken: ' + hours + ' hours')
+    alert('Time taken: ' + hours + ' ' + unit)
 } else {
-    alert('Time taken: ' + hours + ' hours ' + minutes + ' minutes')
+    alert('Time taken: ' + hours + ' ' + unit + ' ' + minutes + ' minutes')
 }
 
 
@@ -31,3 +36,8 @@ if (minutes === 0) {
 
 // Math.floor()
 // parseInt(num)
+
+// let name = 'Tin';
+// let lastName = 'Do';
+
+// name +  ' ' + lastName
