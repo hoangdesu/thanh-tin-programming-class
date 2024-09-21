@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champions</title>
+</head>
+<body>
+    <h1>Champions</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Image</th>
+        </tr>
+        <% championList.forEach(champion => { %>
+            <tr>
+                <td><%= champion._id %></td>
+                <td><%= champion.name %></td>
+                <td><%= champion.role %></td>
+                <td><img src="<%= champion.image %>" alt="<%= champion.name %>" width="300"></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
+
+<!-- <ol>
+    <% championList.forEach(champion => { %>
+        <li><%= champion.name %>:</li>
+    <% }) %>
+</ol> -->
