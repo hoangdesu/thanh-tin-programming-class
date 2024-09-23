@@ -33,6 +33,9 @@ const Champion = mongoose.model('Champion', championSchema);
 // set view engine to use ejs
 app.set('view engine', 'ejs');
 
+// middleware: để bóc tách thông tin từ form gửi từ client
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get('/', (req, res) => {
     // const foodList = ['sushi', 'ramen', 'sashimi'];
@@ -75,6 +78,8 @@ app.get('/', (req, res) => {
 
 
 // using Express (server) + MongoDB (database) + EJS (template engine)
+// 1 endpoint chỉ nên đảm nhiệm 1 nhiệm vụ
+// lấy tất cả tướng trong DB
 app.get('/champions', async (req, res) => {
     // const ahri = new Champion({
     //     name: 'Ahri',
@@ -109,6 +114,27 @@ app.get('/champions', async (req, res) => {
     res.render('champions', { championList: championList });
 });
 
+
+// endpoint này dùng để nhận thông tin từ user, và lưu champion mới vào trong database
+app.post('/champions', async (req, res) => {
+    // console.log(req.body);
+
+    // bóc tách thông tin từ các inputs từ phía client
+    const { championName, role, imageUrl } = req.body;
+
+    // tạo 1 tướng mới từ schema Champion (chỉ lưu trong memory, chưa lưu vào db)
+    const newChamp = new Champion({
+        name: championName,
+        role: role,
+        image: imageUrl
+    });
+
+    // lưu vào mongodb
+    await newChamp.save();
+
+    // reload lại trang để show con tướng mới
+    res.redirect('/champions');
+});
 
 
 app.listen(PORT, () => {
