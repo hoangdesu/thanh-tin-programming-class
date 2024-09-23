@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+
+  <link rel="stylesheet" href="css/index.css" />
+
+  <body class="container">
+    <div>
+      <!-- Your header here -->
+      <header>
+        <img src="images/logo.jpg" width="64" height="64" />
+        <nav>
+          <a href="/">Home Page</a>
+        </nav>
+      </header>
+
+      <!-- Main content -->
+      <main>
+        <!-- Your profile here -->
+        <aside id="profile">
+          <div>
+            <img src="images/profile.jpg" height="250" />
+          </div>
+          <div>
+            <div>
+              <span>Hi, I'm</span>
+              <h1>Do Thanh Tin</h1>
+            </div>
+            <div>
+              <h2>s3970879</h2>
+              <h2>s3970879@rmit.edu.vn</h2>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Your meal plan here -->
+        <section id="meal-plan">
+          <h1>My <b>DAILY MEAL PLAN</b></h1>
+          <form action="/" method="post">
+            <button type="button" class="btn btn-primary">Refresh</button>
+          </form>
+
+          <!-- Your meal list here -->
+          <div id="meal-list">
+            <% plan.meals.forEach(meal => { %>
+            <div class="meal-item">
+              <a href="/meal/<%= meal._id %>">
+                <img src="<%= meal.imageUrl %>" height="300" />
+                <section>
+                  <h3><%= meal.name %></h3>
+                  <span> <%= meal.timeOfDay %> - <%= meal.mealType %> </span>
+                </section>
+              </a>
+            </div>
+            <% }) %>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <%- include('partials/foot') %> <%- include('partials/footer') %>
+  </body>
+</html>
