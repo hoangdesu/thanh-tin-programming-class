@@ -20,7 +20,7 @@ app.get('/', async function (req, res) {
 // Meal endpoint
 app.get('/meal/:name', async function (req, res) {
   const { name } = req.params;
-  const meal = await Plan.findById(name);
+  const meal = await Plan.findById(name); // wrong
   console.log(meal);
   
   res.render('meal', { meal });
