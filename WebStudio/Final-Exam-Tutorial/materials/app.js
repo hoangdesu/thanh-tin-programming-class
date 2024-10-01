@@ -1,19 +1,27 @@
 // To enable the .env
 require('dotenv').config();
 
+
 // App setup
 const express = require('express');
 const app = express();
+
+
+// su dung engine ejs
+app.set('view engine', 'ejs');
+
 
 // Home endpoint
 app.get('/', function (req, res) {
   res.render('index');
 });
 
+
 // Meal endpoint
 app.get('/meal/:name', function (req, res) {
   res.render('meal');
 });
+
 
 // Start the server
 const port = 3000;
