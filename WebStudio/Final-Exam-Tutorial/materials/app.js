@@ -1,5 +1,6 @@
 // To enable the .env
 require('dotenv').config();
+const path = require('path');
 
 
 // App setup
@@ -7,9 +8,14 @@ const express = require('express');
 const app = express();
 
 
+// SETUP APP
+
 // su dung engine ejs
 app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
 
+// khai báo folder public là tĩnh (static) -> middleware
+app.use(express.static('public'))
 
 // Home endpoint
 app.get('/', function (req, res) {
