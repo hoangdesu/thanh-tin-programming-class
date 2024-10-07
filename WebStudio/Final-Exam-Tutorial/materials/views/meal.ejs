@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- head -->
+  <%- include('partials/head') %>
 
-<!-- head -->
-<%- include('partials/head') %>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <%- include('partials/header') %>
 
-<body>
-  <div>
-    
-    <!-- header -->
-    <%- include('partials/header') %>
+      <!-- Main content -->
+      <main>
+        <div>
+          <img
+            src="https://picsum.photos/id/63/200/300"
+            height="450"
+            class="w-100"
+          />
+          <section>
+            <h1>Meal Name</h1>
+            <span> Time of Day - Meal Type </span>
+          </section>
+        </div>
 
-    <!-- Main content -->
-    <main>
-      <div>
-        <img src="https://picsum.photos/id/63/200/300" height="450">
-        <section>
-          <h1>
-            Meal Name
-          </h1>
-          <span>
-            Time of Day - Meal Type
-          </span>
-        </section>
-      </div>
+        <!-- Back button here -->
+        <div class="text-center">
+          <button type="button" id="btn-back" class="btn btn-primary">
+            Back
+          </button>
+        </div>
+      </main>
+    </div>
 
-      <!-- Back button here -->
-      <button type="button" id="btn-back">Back</button>
-    </main>
-  </div>
-
-  <%- include('partials/foot') %>
-
-</body>
-
+    <%- include('partials/foot') %>
+  </body>
 </html>

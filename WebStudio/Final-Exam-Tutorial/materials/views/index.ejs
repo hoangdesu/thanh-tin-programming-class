@@ -4,76 +4,90 @@
 <!-- include head partial here -->
 <%- include('partials/head') %>
 
-<body>
+<body class="container" >
   <div>
 
     <!-- header -->
     <%- include('partials/header') %>
 
     <!-- Main content -->
-    <main>
+    <main class="d-flex gap-4">
       <!-- Your profile here -->
-      <aside id="profile">
+      <aside id="profile" class="bg-primary text-white p-3">
         <div>
-          <img src="images/profile.jpg" height="250" alt="PROFILE PICTUREEEEE">
+          <img src="images/profile.jpg" height="250" alt="PROFILE PICTUREEEEE" class="rounded-circle">
         </div>
         <div>
           <div>
             <span>Hi, I'm</span>
             <h1>Brian</h1>
           </div>
-          <div>
-            <h2>s3697305</h2>
-            <h2>hoangdesu@gmail.com</h2>
+          <div class="fst-italic">
+            <p>s3697305</p>
+            <p>hoangdesu@gmail.com</p>
           </div>
         </div>
       </aside>
 
       <!-- Your meal plan here -->
-      <section id="meal-plan">
-        <h1>My <b>DAILY MEAL PLAN</b></h1>
+      <section id="meal-plan" class="w-100">
+        <div class="text-end mb-4">
+          <h1>My <b>DAILY MEAL PLAN</b></h1>
+          <button class="btn btn-primary px-4 mt-2">Refresh</button>
+        </div>
 
         <!-- Your meal list here -->
         <div id="meal-list">
-          <div>
-            <a href="/meal/#">
-              <img src="https://picsum.photos/id/63/200/300" height="300">
-              <section>
-                <h3>
-                  Meal Name
-                </h3>
-                <span>
-                  Time of Day - Meal Type
-                </span>
-              </section>
-            </a>
+          <!-- meal 1: top row -->
+          <div class="row">
+            <div class="col">
+              <a href="/meal/a">
+                <img src="https://picsum.photos/id/63/200/300" height="300" class="w-100 mb-2">
+                <section>
+                  <h3>
+                    Meal Name
+                  </h3>
+                  <span>
+                    Time of Day - Meal Type
+                  </span>
+                </section>
+              </a>
+            </div>
           </div>
-          <div>
-            <a href="/meal/#">
-              <img src="https://picsum.photos/id/63/200/300" height="150">
-              <section>
-                <h3>
-                  Meal Name
-                </h3>
-                <span>
-                  Time of Day - Meal Type
-                </span>
-              </section>
-            </a>
+
+          <!-- meal 2: 2nd row -->
+          <div class="row mt-5">
+            <div class="col">
+              <a href="/meal/#">
+                <img src="https://picsum.photos/id/63/200/300" height="150"  class="w-100">
+                <section>
+                  <h3>
+                    Meal Name
+                  </h3>
+                  <span>
+                    Time of Day - Meal Type
+                  </span>
+                </section>
+              </a>
+            </div>
+
+            <!-- meal 3: 2nd row -->
+            <div class="col">
+              <a href="/meal/#">
+                <img src="https://picsum.photos/id/63/200/300" height="150" alt="Meal image"  class="w-100">
+                <section>
+                  <h3>
+                    Meal Name
+                  </h3>
+                  <span>
+                    Time of Day - Meal Type
+                  </span>
+                </section>
+              </a>
+            </div>
           </div>
-          <div>
-            <a href="/meal/#">
-              <img src="https://picsum.photos/id/63/200/300" height="150" alt="Meal image">
-              <section>
-                <h3>
-                  Meal Name
-                </h3>
-                <span>
-                  Time of Day - Meal Type
-                </span>
-              </section>
-            </a>
-          </div>
+
+          
         </div>
       </section>
     </main>
