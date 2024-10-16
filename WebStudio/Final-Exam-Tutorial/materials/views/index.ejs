@@ -32,8 +32,10 @@
       <!-- Your meal plan here -->
       <section id="meal-plan" class="w-100">
         <div class="text-end mb-4">
-          <h1>My <b>DAILY MEAL PLAN</b></h1>
-          <button class="btn btn-primary px-4 mt-2">Refresh</button>
+          <h1>My <b><%= plan.name %> </b></h1>
+          <form action="/" method="post">
+            <button class="btn btn-primary px-4 mt-2" id="refresh-button">Refresh</button>
+          </form>
         </div>
 
         <!-- Your meal list here -->
@@ -41,14 +43,14 @@
           <!-- meal 1: top row -->
           <div class="row">
             <div class="col">
-              <a href="/meal/a">
-                <img src="https://picsum.photos/id/63/200/300" height="300" class="w-100 mb-2">
+              <a href="/meal/<%= plan.meals[0].name %> ">
+                <img src="<%= plan.meals[0].imageUrl %>" height="300" class="w-100 mb-2">
                 <section>
                   <h3>
-                    Meal Name
+                    <%= plan.meals[0].name %>
                   </h3>
                   <span>
-                    Time of Day - Meal Type
+                    <%= plan.meals[0].timeOfDay %> - <%= plan.meals[0].mealType %>
                   </span>
                 </section>
               </a>
@@ -94,6 +96,7 @@
   </div>
 
   <%- include('partials/foot') %>
+  <script src="/scripts/index.js"></script>
 
 </body>
 

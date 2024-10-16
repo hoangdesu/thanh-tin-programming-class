@@ -12,13 +12,13 @@
       <main>
         <div>
           <img
-            src="https://picsum.photos/id/63/200/300"
+            src="<%= meal.imageUrl %>"
             height="450"
             class="w-100"
           />
           <section>
-            <h1>Meal Name</h1>
-            <span> Time of Day - Meal Type </span>
+            <h1><%= meal.name %></h1>
+            <span><%= meal.timeOfDay %>- <%= meal.mealType %></span>
           </section>
         </div>
 
