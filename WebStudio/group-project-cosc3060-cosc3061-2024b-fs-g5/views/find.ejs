@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Montserrat:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css"
+        integrity="sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font -->
+     
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/homepage.css">
+    <title>Forum</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+</head>
+
+<body class="container-fluid">
+    <!-- Navbar -->
+    <nav
+            class="navbar navbar-expand-lg navbar-dark fixed-top the-2nd-color">
+            <div class="d-flex shadow container-xxl">
+                <!-- Logo -->
+                <div class="navbar-brand col-lg-2 me-0 p-0">
+                    <a href="/"><img src="/images/logo.png" alt="Logo" height="60px"></a>
+                </div>
+
+                <!-- Hamburger Button -->
+                <button class="navbar-toggler mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible Content -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav flex-grow-1 flex-lg-row flex-sm-row col-lg-8">
+                        <form class="d-flex mt-2 w-100 h-25 me-lg-2 custom-search-form" action="/search" method="GET">
+                            <input class="form-control me-0" type="text" name="query" placeholder="Search...">
+                            <button class="ms-2 btn the-4th-color" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <div class="navbar-nav d-flex flex-row ms-auto">
+                            <% if (userId) { %>
+                                <div class="btn-group d-flex flex-column">
+                                    <button type="button"
+                                        class="btn btn-custom the-2nd-color dropdown-toggle btn-dropdown mt-2"
+                                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                        <span class="me-2 font-secondary">
+                                            <%=user.name%>
+                                        </span>
+                                        <%if(!user.photo){ %>
+                                            <img src="/images/neco-arc.png" id="profilePic" alt="User's profile picture"
+                                                height="24px" width="24px">
+                                            <%} else { %>
+                                                <img src="<%= user.photo %>" id="profilePic"
+                                                    alt="User's profile picture" height="24px" width="24px">
+                                                <%} %>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-lg-end the-4th-colorr roboto">
+                                        <li>
+                                            <form action="/profileFinder/<%= user._id %>" method="post"><input
+                                                    class="dropdown-item" type="submit" value="Profile"></input></form>
+                                        </li>
+                                        <li><a class="dropdown-item" type="button" href="/post">Post a thread</a></li>
+                                        <li><a class="dropdown-item" type="button" href="/logout">Logout</a></li>
+                                    </ul>
+                                </div>
+                                <% } else { %>
+
+                                    <a href="/register" class="nav-link nav-text ms-3 font-primary me-2">Register</a>
+                                    <a href="/login" class="nav-link nav-text font-primary me-2">Login</a>
+                                    <a href="/post" class="nav-link nav-text font-primary me-2">Post a Thread</a>
+                                    <% } %>
+                        </div>
+                    </div>
+                    <div class="d-lg-none mt-4">
+                        <nav class="nav flex-column border-2 border-top">
+                            <a class="nav-link text-light text-end font-primary pe-1" href="/">Home</a>
+                            <a class="nav-link text-light text-end font-primary pe-1" href="/aboutus">About</a>
+                            <a class="nav-link text-light text-end font-primary pe-1" href="/">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Main Content -->
+    <main class="container-xl d-flex justify-content-center align-items-center" style="padding-top: 100px;">
+        <div class="row box">
+            <!-- Mini Navbar (Visible on larger screens) -->
+            <div class="col-2 d-flex flex-column align-items-start"></div>
+            <div
+                    class="col-2 sidenav d-none d-lg-flex flex-column align-items-lg-start border-end border-2 sidebar fixed-top justify-content-center">
+                    <nav class="nav flex-column mb-5 ms-5 fs-5">
+                        <a class=" nav-link text1 text-decoration-none py-2 ps-0 pe-5 font-primary " href="/">Home</a>
+                        <a class=" nav-link text1 text-decoration-none py-2 ps-0 pe-5 font-primary " href="/aboutus">About</a>
+                        <li class="accordion">
+                            <a class="nav-link text1 text-decoration-none py-2 ps-0 pe-5 font-primary btn-contact" href="#!"
+                                role="button" data-bs-toggle="collapse" data-bs-target="#drop-menu" aria-expanded="false"
+                                aria-controls="drop-menu">Contact</a>
+                            <div id="drop-menu" class="drop-menu collapse">
+                                <div class="border-start border-1">
+                                    <a href="https://x.com/s_skygaming" class="text-white text-primary-onHover p-1 m-3">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                    <br>
+                                    <a href="https://www.facebook.com/profile.php?id=61565599724149" class="text-white text-primary-onHover p-1 m-3">
+                                        <span class="fab fa-facebook-f"></span>
+                                    </a>
+                                    <br>
+                                    <a href="#!" class="text-white text-primary-onHover p-1 m-3">
+                                        <span class="fab fa-instagram"></span>
+                                    </a>
+                                    <br>
+                                    <a href="#!" class="text-white text-primary-onHover p-1 m-3">
+                                        <span class="fab fa-linkedin-in"></span>
+                                    </a>
+                                    <br>
+                                    <a href="mailto:Skygaming.fansite@gmail.com" class="text-white text-primary-onHover p-1 m-3">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+    
+                        </li>
+                    </nav>
+                </div>
+            <div class="col-12 col-lg-10 d-flex justify-content-center">
+               
+                    <div class="thread-container mb-4 roboto pt-2">
+                        <h5 class="border border-2 the-1st-color p-2 the-4th-color font-secondary">Search results for
+                            query: <i class="search-query">"<%= query %>"</i></h5>
+                        <% if (threads.length> 0) { %>
+                            <% threads.forEach(thread=> { %>
+                                <div class="border font-secondary text1 p-2 mb-2">
+                                    <h4 class="mb-0 mt-1"><a class="title" href="/thread/<%= thread._id %>">
+                                            <%= thread.title %>
+                                        </a></h4>
+                                    <p class="mb-0">
+                                        <%= thread.content %>
+                                    </p>
+                                    <p class="mb-2 ">
+                                        <%= thread.createdBy.name %> <strong>·</strong>
+                                            <%= formatDate(thread.date) %>
+                                    </p>
+                                </div>
+                                <% }); %>
+                                    <% } else { %>
+                                        <p>No threads found for "<%= query %>"</p>
+                                        <% } %>
+                    </div>
+               
+            </div>
+            <div class="col-2 d-flex flex-column align-items-start"></div>
+            <div class="col-12 col-lg-10 pagination d-flex justify-content-between justify-content-center p-0">
+                <div class="pagination1">
+                    <% if (currentPage > 1) { %>
+                        <form action="/search" method="get">
+                            <input type="hidden" name="page" value="<%= currentPage - 1 %>">
+                            <button class="btn btn-custom" type="submit">← Prev</button>
+                        </form>
+                        <% if (currentPage > 2) { %>
+                            <form action="/search" method="get">
+                                <input type="hidden" name="page" value="<%= currentPage - 2 %>">
+                                <button class="btn btn-custom mx-1" type="submit">
+                                    <%= currentPage - 2 %>
+                                </button>
+                            </form>
+                        <% } %>
+                        <form action="/search" method="get">
+                            <input type="hidden" name="page" value="<%= currentPage - 1 %>">
+                            <button class="btn btn-custom mx-1" type="submit">
+                                <%= currentPage - 1 %>
+                            </button>
+                        </form>
+                    <% } %>
+                    <% if (totalPages > 1) { %>
+                    <form action="/search" method="get">
+                        <input type="hidden" name="page" value="<%= currentPage %>">
+                        <button class="btn btn-current mx-1" type="submit">
+                            <%= currentPage %>
+                        </button>
+                    </form>
+                    <% } %>
+                    <% if (totalPages > 1) { %>
+                        <% if (currentPage < totalPages - 1) { %>
+                            <form action="/search" method="get">
+                                <input type="hidden" name="page" value="<%= currentPage + 1 %>">
+                                <button class="btn btn-custom mx-1" type="submit">
+                                    <%= currentPage + 1 %>
+                                </button>
+                            </form>
+                        <% } %>
+                        <% if (currentPage < totalPages - 2) { %>
+                            <form action="/search" method="get">
+                                <input type="hidden" name="page" value="<%= currentPage + 2 %>">
+                                <button class="btn btn-custom mx-1" type="submit">
+                                    <%= currentPage + 2 %>
+                                </button>
+                            </form>
+                        <% } %>
+                    <% } %>
+                    <% if (currentPage < totalPages) { %>
+                        <form action="/search" method="get">
+                            <input type="hidden" name="page" value="<%= currentPage + 1 %>">
+                            <button type="submit" class="btn btn-custom">
+                                Next →
+                            </button>
+                        </form>
+                    <% } %>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="container-xl d-flex justify-content-center align-items-center">
+        <div class="row box mt-5">
+            <div class="col-2 d-flex flex-column align-items-start"></div>
+            <div class="col-12 col-lg-10  the-1st-color text-white d-flex flex-column justify-content-center p-0">
+                <h5 class="font-primary text-white mb-4 mt-3 d-flex justify-content-center ">
+
+                    <div class="container">
+                        <div class="rotating-text">
+                            <span class="word1"><img src="/images/logo.png" alt="logo" height="70px"></span>
+                            <span class="word2"><img src="/images/logo.png" alt="logo" height="70px"></span>
+                            <span class="word3"><img src="/images/logo.png" alt="logo" height="70px"></span>
+                            <span class="word4"><img src="/images/logo.png" alt="logo" height="70px"></span>
+                            <span class="word5"><img src="/images/logo.png" alt="logo" height="70px"></span>
+                            <span class="word6"><img src="/images/logo.png" alt="logo" height="70px"></span>
+                        </div>
+                    </div>
+                </h5>
+                <ul class="list-unstyled d-flex justify-content-center flex-row">
+                    <li class="m-3"><a class="text-decoration-none footer-text" href="/terms-of-use">Terms of use</a></li>
+                    <li class="m-3"><a class="text-decoration-none footer-text" href="/privacy-policy">Privacy policy</a></li>
+                    <li class="m-3"><a class="text-decoration-none footer-text" href="/aboutus">About us</a></li>
+                </ul>
+
+
+                <div class="bottom d-flex flex-lg-row flex-column justify-content-lg-between justify-content-center
+                        align-items-center">
+                    <p class="anton ms-2">&copy; 2024 Sky Gaming. All rights reserved.</p>
+
+                    <ul class="list-inline nml-2">
+                        <li class="list-inline-item">
+                            <a href="https://x.com/s_skygaming" class="text-white text-primary-onHover p-2">
+                                <span class="fab fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/profile.php?id=61565599724149" class="text-white text-primary-onHover p-2">
+                                <span class="fab fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" class="text-white text-primary-onHover p-2">
+                                <span class="fab fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" class="text-white text-primary-onHover p-2">
+                                <span class="fab fa-linkedin-in"></span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="mailto:Skygaming.fansite@gmail.com" class="text-white text-primary-onHover p-2">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            
+        </div>
+    
+     
+    </footer>
+    <!-- Custom JavaScript -->
+    <script src="/javascript/pagination.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://kit.fontawesome.com/68148c68bd.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
