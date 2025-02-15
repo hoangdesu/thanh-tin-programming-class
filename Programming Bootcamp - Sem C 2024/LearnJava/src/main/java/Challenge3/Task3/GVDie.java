@@ -14,7 +14,7 @@ public class GVDie {
     }
 
     // Roll the die to get 1 - 6
-    public void roll () {
+    public void roll() {
         myValue = rand.nextInt(6) + 1;
     }
 
