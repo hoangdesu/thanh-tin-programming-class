@@ -15,7 +15,7 @@ public class Mar6_ISBN {
 
     boolean liked = false;
 
-    liked -> emotes: ['haha', 'huhu', 'like', 'tim', 'angry']
-
-    HOMEWORK: extend the same function to support ISBN10
+//    liked -> emotes: ['haha', 'huhu', 'like', 'tim', 'angry']
+//
+//    HOMEWORK: extend the same function to support ISBN10
 }
