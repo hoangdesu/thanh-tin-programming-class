@@ -26,6 +26,10 @@ public class Mar11_FormatTable {
 
         String longestString = "League of Legends";
 
+        System.out.println(longestString.length());
+
+        int maxColumnWidth = longestString.length() + 2; // +1 space dau +1 space sau
+
 //        top
         System.out.print("+");
         for (int i = 0; i < longestString.length() + 2; i++) {
@@ -42,5 +46,12 @@ public class Mar11_FormatTable {
         }
 
         System.out.println("+");
+
+        String row2 = "Pokemon";
+        System.out.print("| " + row2);
+        for (int i = 0; i < maxColumnWidth - row2.length() - 1; i++) {
+            System.out.print(" ");
+        }
+        System.out.print("|");
     }
 }
