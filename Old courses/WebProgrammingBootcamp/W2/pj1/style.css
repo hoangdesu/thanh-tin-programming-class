@@ -1,0 +1,71 @@
+/* element selector */
+h1 {
+    color: red;
+}
+
+/* Separation of concerns */
+
+/* 2. class seletor: shared among multiple elements -> dùng dấu chấm . */
+.best-games {
+    color: red;
+
+}
+
+/* 3. id selector: target riêng 1 thằng duy nhất -> #id */
+#child-game {
+    color: blue;
+}
+
+ul {
+    font-size: 30px;
+}
+
+#text1, #text2  {
+    text-decoration: underline;
+}
+
+/* target tất cả h1 ở trong #cars */
+#cars h1 {
+    color: brown;
+    /* text-decoration: wavy; */
+    background: pink;;
+}
+
+/* CSS: cascading style sheet */
+
+/* >: direct child */
+
+#span1 {
+    background-color: burlywood;
+}
+
+#p1 {
+    background: lawngreen;
+}
+
+/* universal selector */
+/* * {
+    background-color: beige;
+} */
+
+/* attribute selector */
+input[type="text"] {
+    font-size: 50px;
+}
+
+a[href="a"] {
+    color: yellow;
+    background: black;
+}
+
+#square {
+    width: 50px;
+    height: 50px;
+    background: red;
+    transition: 1s all;
+}
+
+#square:hover {
+    background: purple;
+    cursor: pointer;
+}

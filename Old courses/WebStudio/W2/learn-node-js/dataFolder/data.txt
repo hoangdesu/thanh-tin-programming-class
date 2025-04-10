@@ -1,0 +1,11 @@
+username: tin
+password: do
+🙏
+
+Scanner sc = new Scanner;
+
+String input = sc.nextLine();
+System.out.println(input);
+
+console.log()
+console.error()

@@ -1,9 +1,0 @@
-0000000000000000000000000000000000000000 e0aba0e46c62349003c5355073c173479cc1c31f hoangdesu <hoangdesu@gmail.com> 1726410498 +0700	branch: Created from refs/remotes/origin/main-test
-e0aba0e46c62349003c5355073c173479cc1c31f a94404c158d914856db698745178872797e6818b hoangdesu <hoangdesu@gmail.com> 1726555629 +0700	pull: Fast-forward
-a94404c158d914856db698745178872797e6818b 1d09872bea94f98c1ab784478be3126ea96585b3 hoangdesu <hoangdesu@gmail.com> 1726555985 +0700	pull: Fast-forward
-1d09872bea94f98c1ab784478be3126ea96585b3 8d9cc45ed50069b5c759e2efb83aa3f2212dee14 hoangdesu <hoangdesu@gmail.com> 1726559330 +0700	commit: added connect-mongo to store session in db
-8d9cc45ed50069b5c759e2efb83aa3f2212dee14 46fe17b29e2e66c266934e33b4e7f98986b9e56f hoangdesu <hoangdesu@gmail.com> 1726559334 +0700	commit: added connect-mongo to store session in db
-46fe17b29e2e66c266934e33b4e7f98986b9e56f 21af13316f33b485e179728a44d836ee56b29fdc hoangdesu <hoangdesu@gmail.com> 1726559344 +0700	pull --rebase (finish): refs/heads/main-test onto 448c16a9bac56994c6f30f09bf068586d22e208b
-21af13316f33b485e179728a44d836ee56b29fdc 70865c753c0e728a32bfab7486d88c70f6c283bb tin12314 <s3970879@rmit.edu.vn> 1726563408 +0700	commit: added guide page, route and controller for posting a new guide
-70865c753c0e728a32bfab7486d88c70f6c283bb a7dc1ee4a4d59daa34ca3510b563c88e0270ab27 tin12314 <s3970879@rmit.edu.vn> 1726565006 +0700	commit: separate pages for different guides. only allow admin to post a new guide
-a7dc1ee4a4d59daa34ca3510b563c88e0270ab27 1ffb528f13a9b8f9213f35cd2719e91735ed4bed tin12314 <s3970879@rmit.edu.vn> 1726566301 +0700	commit: sort by new guide

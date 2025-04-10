@@ -1,0 +1,10 @@
+Sandwiches	Ham sandwich	Classic ham sandwich	Available
+Sandwiches	Chicken salad	Chicken salad sandwich	Available
+Salads	Caesar salad	Chunks of romaine heart lettuce	Available
+Salads	Asian salad	Mixed greens with ginger dressing	Available
+Drinks	Water	16oz bottled water	Available
+Drinks	Sprite	16oz Sprite	Available
+Mexican food	Enchiladas	Beef enchilada in special enchilada sauce	Available
+Mexican food	Chips & salsa	Tortilla chips with freshly made salsa	Available
+Vegetarian	Veggie sub	Big sub stuffed with seasonal vegetables	Available
+Vegetarian	Black bean soup	Our famous slow cooked black bean soup	Available

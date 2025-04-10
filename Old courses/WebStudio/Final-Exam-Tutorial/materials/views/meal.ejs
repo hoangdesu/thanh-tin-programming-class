@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('partials/head') %>
+
+  <body>
+    <div class="container">
+      <!-- header -->
+      <%- include('partials/header') %>
+
+      <!-- Main content -->
+      <main>
+        <div>
+          <img
+            src="<%= meal.imageUrl %>"
+            height="450"
+            class="w-100"
+          />
+          <section>
+            <h1><%= meal.name %></h1>
+            <span><%= meal.timeOfDay %>- <%= meal.mealType %></span>
+          </section>
+        </div>
+
+        <!-- Back button here -->
+        <div class="text-center">
+          <button type="button" id="btn-back" class="btn btn-primary">
+            Back
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <%- include('partials/foot') %>
+  </body>
+</html>
