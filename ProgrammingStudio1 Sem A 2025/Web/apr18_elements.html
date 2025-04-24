@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Lists</h1>
+    <!-- unordered list -->
+    <ul>
+      <li>Matcha latte</li>
+      <li>Cafe sua da</li>
+    </ul>
+
+    <!-- ordered list -->
+    <ol type="I">
+      <li>Com tam</li>
+      <li>Bun rieu</li>
+    </ol>
+
+    <h1>Form & form inputs</h1>
+    <!-- action: nơi để gửi form -->
+    <!-- method: phương thức -->
+    <form action="http://localhost:7070/data" method="GET">
+      <div>
+        <label for="uname">Username</label>
+        <input type="text" name="username" id="uname" placeholder="Enter your username" />
+      </div>
+      <div>
+        <label for="mail">Email</label>
+        <input type="text" name="email" id="mail" placeholder="Enter email here" />
+      </div>
+      <div>
+        <label for="pass">Password</label>
+        <input type="password" name="pwd" id="pass" placeholder="Password goes here" />
+      </div>
+      <!-- <input type="text"> -->
+
+      <input type="button" value="Button using input" />
+      <input type="checkbox" name="" id="" />
+      <input type="color" />
+      <input type="date" name="" id="" />
+      <input type="file" name="" id="" />
+      <input type="number" name="" id="" />
+      <input type="radio" />
+      <!-- 
+        khi làm việc với radio:
+        1. các option phải có chung name attribute
+        2. các option phải có value -->
+      <div>
+        <label for="">Chọn món ăn</label>
+        <input type="radio" name="monan" id="comsuon" value="com-suon"/>
+        <label for="comsuon">Com suon</label>
+        <input type="radio" name="monan" id="comtam" value="com-tam" checked />
+        <label for="comtam">Com tam</label>
+        <input type="radio" name="monan" id="comga" value="com-ga" />
+        <label for="comga">Com ga xoi mo</label>
+      </div>
+
+
+      <div>
+          <input type="checkbox" name="tour" id="vung-tau" value="vung-tau">
+          <label for="vung-tau">Vung Tau</label>
+          <input type="checkbox" name="tour" id="da-lat" value="da-lat" checked>
+          <label for="da-lat">Da Lat</label>
+          <input type="checkbox" name="tour" id="nha-trang" value="nha-trang" checked>
+          <label for="nha-trang">Nha Trang</label>
+      </div>
+
+      <label for="">Default value</label>
+      <input type="text" value="default value here">
+
+      <label for="cars">Choose your car</label>
+      <select name="cars" id="cars" multiple>
+        <option value="ferrari">Ferrari</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="lamborghini">Lamborghini</option>
+      </select>
+
+      <!-- bat buoc phai co name attribute -->
+      <button>Submit</button>
+      <button type="reset">Clear form</button>
+    </form>
+  </body>
+</html>

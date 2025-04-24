@@ -1,0 +1,17 @@
+h1 {
+    color: red;
+    text-align: center;
+    text-decoration: underline dotted;
+}
+
+h3 {
+    font-style: italic;
+    font-size: 30px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
