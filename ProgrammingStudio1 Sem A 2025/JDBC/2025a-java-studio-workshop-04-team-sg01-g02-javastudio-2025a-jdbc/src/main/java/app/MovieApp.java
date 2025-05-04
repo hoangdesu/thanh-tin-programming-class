@@ -31,51 +31,17 @@ public class MovieApp {
         String queryName = sc.nextLine();
 
 
-        -- Case 1: only 1 director
-        Enter director name: allen
-        Found 1 director. Did you mean Allen Woody? yes
-        These are all the movies by director Allen Woody
-        1. Annie Hall
-        2. ...
-        3. ...
-
-
-
-        -- Case 2: multiple directors
-        Enter director name: stanley
-
-        Found 2 directors with the name "stanley":
-        1. Kramer, Stanley
-        2. Kubrick, Stanley
-
-        Enter director number: 2
-        These are the movies by director "Kubrick, Stanley":
-        1. Dr. Strangelove
-        2. Clockwork Orange
-        3. 2001
-
-
-        -- Wrong input case:
-        Enter director number: 3
-        Sorry. No director with number 3. Please enter again:
-        1. Kramer, Stanley
-        2. Kubrick, Stanley
-
-    }
-
-    public static ArrayList<Director> findDirectors(String dirName) {
-
-    }
-
-    public static ArrayList<Movie> findMoviesByDirector(int dirNum) {
-
-    }
-
-
-
-    public static ArrayList<Movie> queryMoviesByName(String name) {
         
+
     }
+
+
+
+
+
+    // public static ArrayList<Movie> queryMoviesByName(String name) {
+        
+    // }
 
     public static ArrayList<Movie> getMoviesWithYears(String year) {
         ArrayList<Movie> movies = new ArrayList<>();
