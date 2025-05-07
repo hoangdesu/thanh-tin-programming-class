@@ -22,6 +22,7 @@ public class Hello_Javalin {
             .get("/hi", ctx -> ctx.result("Hiiiii"))
             .get("/tin", ctx -> ctx.result("Hello Tin :D"))
             .get("/drinks", ctx -> ctx.json(drinks))
+            .get("/me", ctx -> ctx.html("<h1 style=\"color: red;\">About me: Tin Do</h1>"))
             .start(JAVALIN_PORT);
     }
 }

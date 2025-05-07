@@ -13,7 +13,7 @@ import io.javalin.core.util.RouteOverviewPlugin;
  * @author Timothy Wiley, 2023. email: timothy.wiley@rmit.edu.au
  * @author Santha Sumanasekara, 2021. email: santha.sumanasekara@rmit.edu.au
  */
-public class App {
+public class May7_ServingWeb {
 
     public static final int         JAVALIN_PORT    = 7001;
     public static final String      CSS_DIR         = "css/";
@@ -38,8 +38,7 @@ public class App {
 
     public static void configureRoutes(Javalin app) {
         // ADD ALL OF YOUR WEBPAGES HERE
-        app.get(PageIndex.URL, new PageIndex());
-        app.get("/haha", ctx -> ctx.html("<h2>hehe</h2>"));
+        app.get("/", new AboutMe());
     }
 
 }
