@@ -30,13 +30,19 @@ public class May9_Params {
 
         // Route handlers
         // 1. Path param
-        app.get("/hello/:username", ctx -> {
-            String name = ctx.pathParam("username");
+        // http://localhost:7001/hello/Tin
+        app.get("/hello/:name", ctx -> {
+            String name = ctx.pathParam("name");
             ctx.result("Hello " + name);
         });
 
         // 2. Query params (query string)
         // "http://localhost:7001/hi?name=tin&age=20"
+        // => {
+        //     name: "tin",
+        //     age: "20"
+        // }
+
         app.get("/hi", ctx -> {
             String name = ctx.queryParam("name");
 
@@ -80,7 +86,7 @@ public class May9_Params {
                         </html>
                         """;
 
-                ctx.html(html);           
+                ctx.html(html);
             }
         });
 
@@ -102,3 +108,11 @@ public class May9_Params {
 
     }
 }
+
+
+// www.facebook.com/:username
+
+// app.get("/:username", {
+//     // tìm username có tồn tại trong db hay ko
+// })
+
