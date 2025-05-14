@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 th:text="${user}">HAHAHAHAHAHA</h1>
+    <p>Welcome to my website :D</p>
+    <p th:text="${'I am from ' + country + ' 🇻🇳'}"></p>
+    <img th:src="${image}" alt="" width="500">
+
+    <h3>Foods that I love:</h3>
+    <ul>
+        <li th:each="mon_an : ${foods}" th:text="${'Món: ' + mon_an}"></li>
+    </ul>
+
+</body>
+</html>
